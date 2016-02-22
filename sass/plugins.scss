@@ -1,0 +1,142 @@
+.church_social_sermon_archive {
+    margin: 20px 0;
+
+    table {
+        width: 100%;
+        border-spacing: 0;
+        border-collapse: separate;
+
+        thead {
+            tr {
+                th {
+                    padding: 5px;
+                    font-family: "Neue Helvetica 67 Condensed Medium", sans-serif;
+                    -webkit-font-smoothing: antialiased;
+                    font-weight: normal;
+                    border-bottom: #a69d91 dotted 1px;
+                    font-size: 18px;
+                    line-height: 150%;
+                    text-align: left;
+                    border-bottom: $light_grey solid 1px;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    font-size: 12px;
+                    line-height: 120%;
+                    padding: 10px 5px;
+                    border-bottom: $light_grey solid 1px;
+                }
+            }
+        }
+    }
+
+    .sermon {
+        .description {
+            margin: 15px 0;
+        }
+
+        ul.details {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                position: relative;
+                padding: 0 0 5px 90px;
+
+                h3 {
+                    margin: 0;
+                    width: 90px;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    font-size: 16px;
+                    line-height: 150%;
+                }
+
+                p {
+                    margin: 0;
+                    font-size: 14px;
+                    line-height: 150%;
+                }
+            }
+        }
+
+        .formats {
+            margin: 25px 0 0 0;
+
+            .tab_navigation {
+                overflow: hidden;
+                list-style: none;
+                margin: 0;
+                padding: 10px 0 0 15px;
+                background: $lightest_grey;
+                border-radius: 3px 3px 0 0;
+
+                li {
+                    float: left;
+                    padding: 5px 15px 3px 15px;
+                    color: $dark_grey;
+                    font-weight: bold;
+                    font-size: 13px;
+                    text-decoration: none;
+                    border-radius: 2px 2px 0 0;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $darkest_grey;
+                    }
+
+                    &.selected {
+                        color: white;
+                        background: darken($light_grey, 15%);
+                    }
+                }
+            }
+
+            .tab_content {
+                list-style: none;
+                margin: 0;
+                padding: 10px;
+                background: darken($light_grey, 15%);
+                border-radius: 0 0 3px 3px;
+
+                li {
+                    display: none;
+
+                    &.selected {
+                        display: block;
+                    }
+
+                    &.audio {
+                        audio {
+                            margin: 10px 0 20px 0;
+                            display: block;
+                        }
+
+                        a {
+                            display: inline-block;
+                            padding: 10px 15px;
+                            color: darken(white, 35%);
+                            font-size: 14px;
+                            line-height: 100%;
+                            font-weight: bold;
+                            background: lighten(black, 15%);
+                            border-radius: 3px;
+
+                            &:hover {
+                                color: darken(white, 25%);
+                                background: lighten(black, 10%);
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

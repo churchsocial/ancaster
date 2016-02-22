@@ -1,0 +1,364 @@
+/* Colours */
+$orange: #f7941e;
+$darkest_grey: #4c4d4f;
+$dark_grey: #757575;
+$light_grey: #e3e3e3;
+$lightest_grey: #f3f3f3;
+
+::-moz-selection {
+    background: $orange;
+    color: white;
+    text-shadow: none;
+}
+
+::selection {
+    background: $orange;
+    color: white;
+    text-shadow: none;
+}
+
+html {
+    background: #454648 url(../img/gray_texture_bg.jpg) center top;
+    min-width: 940px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.center {
+    margin: 0 auto;
+    width: 940px;
+    position: relative;
+}
+
+.header {
+    background: white;
+    min-width: 940px;
+
+    .center {
+        height: 130px;
+
+        .logo {
+            position: absolute;
+            left: 0;
+            bottom: 15px;
+        }
+
+        .login {
+            position: absolute;
+            right: 0;
+            bottom: 15px;
+            padding: 6px 15px;
+            color: white;
+            text-shadow: 1px 1px #d27e1a;
+            font-family: "Neue Helvetica 67 Condensed Medium", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 100%;
+            text-decoration: none;
+            background: $orange;
+            border-radius: 3px;
+
+            &:hover {
+                background: #e18518;
+                text-shadow: 1px 1px #a86310;
+            }
+        }
+    }
+}
+
+.container {
+    min-width: 940px;
+    overflow: hidden;
+}
+
+.masthead {
+    position: relative;
+    border-style: solid;
+    border-color: $dark_grey;
+    border-width: 7px 0;
+
+    .cross {
+        position: absolute;
+        z-index: 1000;
+        display: block;
+        left: 50%;
+        bottom: -200px;
+        margin: 0 0 0 340px;
+        background: url(../img/cross.png);
+        width: 275px;
+        height: 380px;
+        right: -100px;
+
+        &.no_banner {
+            top: 20px;
+        }
+    }
+
+    .menu {
+        width: 940px;
+        margin: 0 auto;
+        padding: 17px 0 13px 0;
+        list-style: none;
+
+        > li {
+            display: inline-block;
+            position: relative;
+
+            > a,
+            > a:visited {
+                margin: 0 15px;
+                font-family: "Neue Helvetica 67 Condensed Medium", sans-serif;
+                -webkit-font-smoothing: antialiased;
+                color: #b2b2b2;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 100%;
+                text-transform: uppercase;
+                text-decoration: none;
+
+                &:hover {
+                    color: white;
+                }
+            }
+
+            &.selected {
+                a {
+                    color: white;
+                }
+            }
+
+            &:hover {
+                ul {
+                    display: block;
+                }
+            }
+
+            ul {
+                display: none;
+                margin: 0;
+                padding: 15px;
+                list-style: none;
+                position: absolute;
+                left: 5px;
+                z-index: 2500;
+                background: #757575;
+                border: #555556 solid 2px;
+
+                li {
+                    padding: 5px 0;
+
+                    a,
+                    a:visited {
+                        color: white;
+                        font-size: 14px;
+                        text-decoration: none;
+                        white-space: nowrap;
+
+                        &:hover {
+                            color: $orange;
+                        }
+                    }
+
+                    &.selected {
+                        a {
+                            color: $orange;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .banner {
+        margin: 0 auto 35px auto;
+        padding: 0;
+        width: 940px;
+        outline: #38393a solid 2px;
+
+        img {
+            display: block;
+        }
+    }
+}
+
+.columns {
+    background: white url(../img/content_bg.png) center;
+
+    .center {
+        overflow: hidden;
+
+        .content {
+            float: left;
+            width: 590px;
+            min-height: 320px;
+            margin: 0 30px 30px 10px;
+            padding: 0 0 10px 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: $darkest_grey;
+            font-size: 14px;
+            line-height: 165%;
+
+            h1 {
+                margin: 0 0 30px -10px;
+                padding: 20px 10px 10px 10px;
+                position: relative;
+                width: 610px;
+                font-family: "Neue Helvetica 67 Condensed Medium", sans-serif;
+                -webkit-font-smoothing: antialiased;
+                font-weight: normal;
+                font-size: 30px;
+                line-height: 100%;
+                background: #f0f0f0;
+                text-transform: uppercase;
+                border-bottom: #e0e0e0 solid 2px;
+
+                a {
+                    color: $darkest_grey;
+                    font-weight: normal;
+                }
+            }
+
+            h2 {
+                margin: 30px 0 20px 0;
+                font-size: 20px;
+                line-height: 150%;
+                font-family: "Neue Helvetica 67 Condensed Medium", sans-serif;
+                -webkit-font-smoothing: antialiased;
+                font-weight: normal;
+                border-bottom: #a69d91 dotted 1px;
+            }
+
+            p {
+                margin: 20px 0;
+            }
+
+            a {
+                color: $orange;
+                font-weight: bold;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .sidebar {
+            width: 244px;
+            padding: 20px 30px 20px 33px;
+            float: left;
+
+            h2 {
+                margin: 0;
+                font-family: "Neue Helvetica 67 Condensed Medium", sans-serif;
+                color: $darkest_grey;
+                font-weight: normal;
+                -webkit-font-smoothing: antialiased;
+                font-size: 30px;
+                line-height: 100%;
+                text-transform: uppercase;
+            }
+
+            ul {
+                margin: 25px 0 0 0;
+                padding: 0;
+                list-style: none;
+
+                li {
+                    margin: 0 0 15px 0;
+
+                    &.selected {
+                        a {
+                            color: $orange;
+                        }
+                    }
+
+                    a {
+                        font-family: "Neue Helvetica 67 Condensed Medium", sans-serif;
+                        color: $darkest_grey;
+                        font-size: 16px;
+                        line-height: 120%;
+                        font-weight: normal;
+                        -webkit-font-smoothing: antialiased;
+                        text-decoration: none;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+            .events {
+                .date {
+                    margin: 5px 0 0 0;
+                    font-size: 11px;
+                    line-height: 100%;
+                    text-transform: uppercase;
+                    color: $darkest_grey;
+                }
+            }
+
+            .verse {
+                position: relative;
+                left: -30px;
+                margin: 100px 0 15px 0;
+                width: 293px;
+                height: 132px;
+
+                &.with_events {
+                    margin-top: 30px;
+                }
+
+                img {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    padding: 15px 0 30px 0;
+    border-style: solid;
+    border-color: $dark_grey;
+    border-width: 7px 0 0 0;
+
+    .center {
+        overflow: hidden;
+        color: white;
+        font-size: 12px;
+        line-height: 150%;
+
+        strong {
+            font-size: 15px;
+        }
+
+        a {
+            color: $orange;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .copyright {
+            float: left;
+            width: 640px;
+        }
+
+        .address {
+            float: left;
+            width: 300px;
+        }
+    }
+}
