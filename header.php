@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php wp_title('|', true, 'right').bloginfo('name') ?></title>
     <meta name="description" content="<?php bloginfo('description')?>">
     <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url') ?>/css/all.css" />
+    <script src="<?php bloginfo('template_url') ?>/js/respond.js"></script>
     <?php wp_head() ?>
 </head>
 
