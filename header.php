@@ -24,12 +24,9 @@
 <div class="container">
     <div class="masthead <?php if (!has_post_thumbnail($post->ID)) echo 'no_banner'; ?>">
         <div class="cross <?php if (!has_post_thumbnail($post->ID)) echo 'no_banner'; ?>"></div>
-        <?php wp_nav_menu([
-            'theme_location' => 'main_menu',
-            'depth' => 2,
-            'menu_class' => 'menu',
-            'container' => '',
-        ]) ?>
+        <div class="menu">
+            <?=get_main_menu()?>
+        </div>
         <?php if (has_post_thumbnail($post->ID)): ?>
             <div class="banner">
                 <?=get_the_post_thumbnail($post->ID, 'banner') ?>

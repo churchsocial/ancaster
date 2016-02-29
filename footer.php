@@ -1,7 +1,9 @@
             </div>
             <div class="sidebar">
                 <?php if (get_sub_menu()): ?>
-                    <?=get_sub_menu()?>
+                    <div class="sub_menu">
+                        <?=get_sub_menu()?>
+                    </div>
                 <?php endif ?>
                 <?php if (is_front_page()): ?>
                     <div class="verse">

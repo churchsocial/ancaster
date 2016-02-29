@@ -99,77 +99,87 @@ body {
     }
 
     .menu {
-        width: 940px;
-        margin: 0 auto;
-        padding: 17px 0 13px 0;
-        list-style: none;
+        ul {
+            width: 940px;
+            margin: 0 auto;
+            padding: 17px 0 13px 0;
+            list-style: none;
 
-        > li {
-            display: inline-block;
-            position: relative;
+            li {
+                display: inline-block;
+                position: relative;
 
-            > a,
-            > a:visited {
-                margin: 0 15px;
-                font-family: "Neue Helvetica 67 Condensed Medium", sans-serif;
-                -webkit-font-smoothing: antialiased;
-                color: #b2b2b2;
-                font-weight: normal;
-                font-size: 18px;
-                line-height: 100%;
-                text-transform: uppercase;
-                text-decoration: none;
+                a,
+                a:visited {
+                    margin: 0 15px;
+                    font-family: "Neue Helvetica 67 Condensed Medium", sans-serif;
+                    -webkit-font-smoothing: antialiased;
+                    color: #b2b2b2;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 100%;
+                    text-transform: uppercase;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: white;
+                    }
+                }
+
+                &.current-menu-ancestor,
+                &.current-menu-parent,
+                &.current_page_parent,
+                &.current_page_ancestor {
+                    a {
+                        color: white;
+                    }
+                }
 
                 &:hover {
-                    color: white;
-                }
-            }
-
-            &.current-menu-ancestor,
-            &.current-menu-parent,
-            &.current_page_parent,
-            &.current_page_ancestor {
-                a {
-                    color: white;
-                }
-            }
-
-            &:hover {
-                ul {
-                    display: block;
-                }
-            }
-
-            ul {
-                display: none;
-                margin: 0;
-                padding: 15px;
-                list-style: none;
-                position: absolute;
-                left: 5px;
-                z-index: 2500;
-                background: #757575;
-                border: #555556 solid 2px;
-
-                li {
-                    padding: 5px 0;
-
-                    a,
-                    a:visited {
-                        color: white;
-                        font-size: 14px;
-                        text-decoration: none;
-                        white-space: nowrap;
-
-                        &:hover {
-                            color: $orange;
-                        }
+                    ul {
+                        display: block;
                     }
+                }
 
-                    &.current-menu-item,
-                    &.current_page_item {
-                        a {
-                            color: $orange;
+                ul {
+                    display: none;
+                    margin: 0;
+                    padding: 10px 15px;
+                    width: auto;
+                    list-style: none;
+                    position: absolute;
+                    left: 5px;
+                    z-index: 2500;
+                    background: #757575;
+                    border: #555556 solid 2px;
+
+                    li {
+                        display: block;
+                        margin: 5px 0;
+                        padding: 0;
+
+                        a,
+                        a:visited {
+                            margin: 0;
+                            padding: 0;
+                            color: white;
+                            font-family: Arial, Helvetica, sans-serif;
+                            font-size: 14px;
+                            line-height: 1;
+                            text-decoration: none;
+                            text-transform: none;
+                            white-space: nowrap;
+
+                            &:hover {
+                                color: $orange;
+                            }
+                        }
+
+                        &.current-menu-item,
+                        &.current_page_item {
+                            a {
+                                color: $orange;
+                            }
                         }
                     }
                 }
