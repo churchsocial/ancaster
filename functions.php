@@ -61,7 +61,7 @@ function get_sub_menu()
     $menu_items = [];
 
     foreach (wp_get_nav_menu_items('Main Menu') as $menu_item) {
-        if ((string) $menu_item->ID === (string) $menu_item_id or (string) $menu_item->menu_item_parent === (string) $menu_item_id) {
+        if ((string) $menu_item->menu_item_parent === (string) $menu_item_id) {
             $menu_items[] = [
                 'url' => $menu_item->url,
                 'title' => $menu_item->title,

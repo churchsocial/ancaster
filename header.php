@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><?php wp_title('|', true, 'right').bloginfo('name') ?></title>
     <meta name="description" content="<?php bloginfo('description')?>">
-    <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url') ?>/css/all.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url') ?>/css/all.css?v=<?=wp_get_theme()->get('Version')?>" />
     <script src="<?php bloginfo('template_url') ?>/js/respond.js"></script>
     <?php wp_head() ?>
 </head>
@@ -26,7 +26,7 @@
         <div class="cross <?php if (!has_post_thumbnail($post->ID)) echo 'no_banner'; ?>"></div>
         <?php wp_nav_menu([
             'theme_location' => 'main_menu',
-            'depth' => 1,
+            'depth' => 2,
             'menu_class' => 'menu',
             'container' => '',
         ]) ?>

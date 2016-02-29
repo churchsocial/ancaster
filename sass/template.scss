@@ -125,7 +125,10 @@ body {
                 }
             }
 
-            &.selected {
+            &.current-menu-ancestor,
+            &.current-menu-parent,
+            &.current_page_parent,
+            &.current_page_ancestor {
                 a {
                     color: white;
                 }
@@ -163,7 +166,8 @@ body {
                         }
                     }
 
-                    &.selected {
+                    &.current-menu-item,
+                    &.current_page_item {
                         a {
                             color: $orange;
                         }
