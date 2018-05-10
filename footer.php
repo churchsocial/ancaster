@@ -22,7 +22,7 @@
             <div class="address">
                 <strong>Ancaster Canadian Reformed Church</strong><br>
                 575 Shaver Road, Ancaster Ontario [<a href="http://maps.google.ca/maps?q=575+Shaver+Rd,+Hamilton,+ON+L9G+3K9&hl=en&sll=43.17362,-80.143545&sspn=0.218581,0.528374&hnear=575+Shaver+Rd,+Hamilton,+Hamilton+Division,+Ontario+L9G+3K9&t=m&z=17">map</a>]<br>
-                905-648-7019<br>
+                905-304-1114<br>
             </div>
         </div>
     </div>
